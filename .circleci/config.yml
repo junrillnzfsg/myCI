@@ -10,17 +10,3 @@ jobs:
     steps:
       - checkout
       - run: echo "I'm Build"
-workflows:
-  version: 2
-  schedule_build:
-    triggers:
-      - schedules:
-        cron: "10 * * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - build
-      - hello_world
-
