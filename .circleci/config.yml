@@ -19,16 +19,16 @@ jobs:
       - checkout
       - run: echo "I'm Build"
 workflows:
-  version: 2
-  schedule-build:
-    triggers:
-      - schedules:
-          cron: "10 * * * *"
-          filters:
-            branches:
-              only:
-                - master
-  jobs:
-    - build
-    - hello-world
+    version: 2
+    schedule-build:
+      triggers:
+        - schedules:
+            cron: "10 * * * *"
+            filters:
+              branches:
+                only:
+                  - master
+      jobs:
+        - build
+        - hello-world
 
