@@ -12,7 +12,7 @@ workflows:
   schedule_build:
     triggers:
       - schedule:
-          cron: "10 * * * *"
+          cron: "30 * * * *"
           filters:
             branches:
               only:
