@@ -7,9 +7,6 @@ jobs:
     steps:
       - checkout
       - run: echo "I'm Build"
-  hello_world:
-    steps:
-      - run: echo "Hello World"
 workflows:
   version: 2
   schedule_build:
@@ -22,5 +19,3 @@ workflows:
                 - master
     jobs:
       - build
-      - hello_world
-
